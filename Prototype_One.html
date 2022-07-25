@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    background-image: linear-gradient(90deg, rgb(68, 144, 190),rgb(251, 254, 241));
+}
+
+.button {
+    
+   
+
+    color: rgb(7, 6, 6);
+   
+    text-decoration: none;
+    padding: 15px 30px;
+
+    border:rgb(12, 0, 0) 1px solid; 
+    margin: 50px;
+   
+   
+    text-align: center;
+    opacity: 1;
+   
+
+
+}
+.box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height:85vh; 
+    opacity: 1;
+
+}
+h1 {
+  position: relative;
+  text-align: center;
+  margin: auto;
+ 
+}
+.TIDRC_info{
+    position: relative;
+    margin-top: 10px;
+    
+    text-align: center;
+    opacity: 0;
+}
+.hidden {
+    opacity:1;
+}
+</style>
+</head>
+
+<header id="title">
+    <h1> Prototype One</h1>
+    <div class="TIDRC_info">
+    <h2 > 7) Use a minimum of 14-point font size to help children read faster
+        <br>8) Avoid using Times font style as children report it to be significantly less easy to read 
+    </h2>
+</div>
+</header>
+
+<div class = "box" >
+<a  class="button" > Next </a>
+</div>
+
+<body>
+
+<div class="tablet">
+  <div class="content">
+   
+  </div>
+</div>
+
+</body>
+<script>
+ 
+    const Next_btn = document.querySelector(".box");
+    const displayed_text = document.querySelector(".TIDRC_info");
+    var counter = 0 ; 
+   
+    Next_btn.addEventListener("click", e => {
+        console.log("work");
+        counter = counter + 1 ; 
+        if(counter ==1 )
+        {
+        displayed_text.classList.add("hidden"); 
+        console.log(counter);
+        }
+        else if (counter ==2){
+            displayed_text.classList.remove("hidden");
+            console.log(counter); 
+        }
+       
+    })
+
+</script>
+</html>
