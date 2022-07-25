@@ -52,14 +52,18 @@ h1 {
     opacity:1;
 }
 
-#TIDRC_example {
+.information {
     
     text-align:left; 
     font-size:20px;
-   
     position:relative; 
+    animation:exmaple_ani; 
+    animation-duration: 3s;
+    animation-fill-mode: forwards; 
+    opacity: 0;
     
 }
+
 </style>
 </head>
 
@@ -73,7 +77,7 @@ h1 {
 </header>
 
 <body>
-    <div id = "TIDRC_example" class="inormation">
+    <div id = "TIDRC_example" class="information">
         <p> Example) </p>
  </div>
 
@@ -93,6 +97,7 @@ h1 {
  
     const Next_btn = document.querySelector(".box");
     const displayed_text = document.querySelector(".TIDRC_info");
+    const ex_text = document.querySelector(".information"); 
     var counter = 0 ; 
    
     Next_btn.addEventListener("click", e => {
@@ -104,7 +109,7 @@ h1 {
         console.log(counter);
         }
         else if (counter ==2){
-            displayed_text.classList.remove("hidden");
+            ex_text.classList.add("hidden");
             console.log(counter); 
         }
        
